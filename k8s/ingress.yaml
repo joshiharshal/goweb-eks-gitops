@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: go-eks-gitops
+  labels:
+    app.kubernetes.io/name: go-eks-gitops
+spec:
+  rules:
+  - host: joshiharshal.cloud
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: myapp
+            port: 
+              number: 8080

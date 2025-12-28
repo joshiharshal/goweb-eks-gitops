@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-eks-gitops
+spec:
+  selector:
+    app: go-eks-gitops
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+selector:
+    app: go-web-app
+    type: ClusterIP
