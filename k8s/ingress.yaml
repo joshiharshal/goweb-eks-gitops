@@ -2,9 +2,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: go-eks-gitops
-  labels:
-    app.kubernetes.io/name: go-eks-gitops
+  annotation:
+   nginx.ingress.kubernetes.io/rewrite-target
 spec:
+  ingressClassName: nginx
   rules:
   - host: joshiharshal.cloud
     http:
@@ -13,6 +14,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: myapp
+            name: go-web-app
             port: 
               number: 8080

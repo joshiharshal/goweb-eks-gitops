@@ -9,7 +9,7 @@ spec:
       app: go-eks-gitops
   template:
     metadata:
-      labels:
+      labels: # tag 
         app: go-eks-gitops
     spec:
       containers:
