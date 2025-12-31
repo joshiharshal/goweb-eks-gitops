@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: go-eks-gitops
-        image: harshal001/go-eks-gitops:latest
+        image: harshal001/go-eks-gitops:{{ .Values.image.tag }}
         resources:
           requests:
             memory: "64Mi"
