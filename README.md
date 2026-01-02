@@ -15,6 +15,12 @@ To run the server, execute the following command:
 
 ```bash
 go run main.go
+
+
+http://localhost:8080/home
+http://localhost:8080/services
+http://localhost:8080/contact
+http://localhost:8080/about 
 ```
 
 The server will start on port 8080. You can access it by navigating to `http://localhost:8080/home` in your web browser.
